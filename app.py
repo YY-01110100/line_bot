@@ -39,13 +39,17 @@ def handle_message(event):
     msg = event.message.text
     r = '我看不懂'
 
-    if msg == 'hi'：
-        r = 'hi'
-    elif msg == '你吃饭了么'
+    if msg in ['hi', 'Hi']：
+        r = '嗨'
+    elif msg == '你吃饭了么'：
         r = '还没'
+    elif msg == '你是谁'：
+        r = '我是机器人'
+    elif == '订位子'：
+        r = '请问几位'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
